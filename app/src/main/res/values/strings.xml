@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HFUT校园助手</string>
+    <string name="password">密码</string>
+    <string name="account">账号</string>
+    <string name="Class">计算机科学与技术二班</string>
+    <string name="Name">赤羽</string>
+    <string name="Score">成绩</string>
+    <string name="Person">个人信息</string>
+    <string name="HomePage">课表</string>
+</resources>

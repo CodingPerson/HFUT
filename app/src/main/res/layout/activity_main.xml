@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    tools:context=".MainActivity">
+
+    <!--主屏幕显示的内容-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--Fragment组件-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4E9FCA"
+            android:layout_gravity="left"
+            >
+            <com.example.hfut.CircleImageView
+                android:id="@+id/viewToBar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="18dp"
+                android:src="@mipmap/touxiang"
+                app:border_color="#FFF"
+                app:border_width="1dp" />
+            <TextView
+                android:id="@+id/toolBarText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="课表"
+                android:textColor="#FFF"
+                android:textSize="20dp" />
+        </android.support.v7.widget.Toolbar>
+        <FrameLayout
+            android:id="@+id/KS"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/lineLayoutPage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+        </FrameLayout>
+        <!--设置底部导航按钮-->
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomnavigationviewPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemTextColor="@drawable/selector_tab_color"
+            app:labelVisibilityMode="auto"
+            app:menu="@menu/bottom_navigation_tab_page">
+        </android.support.design.widget.BottomNavigationView>
+    </LinearLayout>
+    <!--左侧菜单弹出的内容-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#E8ECEE"
+        android:orientation="vertical">
+        <!--菜单列表-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <com.example.hfut.CircleImageView
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hint2_address_details"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="18dp"
+                android:layout_weight="3"
+                android:src="@mipmap/touxiang"
+                app:border_color="#FFF"
+                app:border_width="1dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/getName"
+                    android:textColor="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|bottom"
+                    android:paddingLeft="16dp"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/getClass"
+                    android:textColor="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="16dp"
+                    android:text="@string/Class"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="25dp" />
+        </LinearLayout>
+        <!--设置底部导航按钮-->
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomnavigationview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemTextColor="#000"
+            app:menu="@menu/bottom_navigation_tab">
+        </android.support.design.widget.BottomNavigationView>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
